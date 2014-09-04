@@ -1,0 +1,154 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CheirTrades</title>
+		<link rel="stylesheet" href="css/foundation.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/vendor/modernizr.js"></script>
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	</head>
+  
+	<body>  
+		<div class="contain-to-grid sticky">
+			<nav class="top-bar" data-topbar>
+				<ul class="title-area">
+					<li class="name">
+						<h1><a href="#" id="name"></a></h1>
+					</li>
+				</ul>	
+			</nav>
+		</div>
+		<br>
+		
+		<div class="row collapse" id="search" >
+			<div class="small-10 columns">
+				<input type="text" name="search" placeholder="Search for Pokémon"></input>
+			</div>
+			<div class="small-1 columns">
+				<a href="#" class="button postfix"><i class="fa fa-search"></i></a>
+			</div>
+			<div class="small-1 columns">
+				<a href="#" class="button postfix"><i class="fa fa-cog"></i></a>
+			</div>
+		</div>
+		
+		<div class="row"><div class="small-12 column"><p id="custom-label"><span class="right"></span></p></div></div>
+		<div class="row" id="pokemon"></div>
+		<br>
+		<div class="row" id="pagination"></div>
+		
+		<div class="center_spin" id="loading"><i class="fa fa-spinner fa-5x fa-spin"></i></div>
+	</body>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+		$(document).foundation();
+		
+		var curPlace = 0;
+		var processing = false;
+		function LoadPage()
+		{
+			$.getJSON("data.txt", function(data) {
+				console.log(data); // use data as a generic object 
+				console.log(curPlace);
+				processing = true;
+				
+				var NameLabel = document.getElementById("name");
+				NameLabel.innerHTML = data.Name
+				
+				var FriendCodeLabel = document.getElementById("custom-label");
+				FriendCodeLabel.innerHTML = data.LeftLabel + "<span class='right'>" + data.RightLabel + "</span>";
+				
+				var LoadLabel = document.getElementById("loading");
+				LoadLabel.innerHTML = "<i class='fa fa-spinner fa-5x fa-spin'></i>";
+				
+				var PokemonForTrade = document.getElementById("pokemon");
+				for (i = curPlace; i < Math.min(curPlace + data.PaginationCount, data.Pokemon.length); i++) 
+				{
+					var url = "";
+					var backshiny = "";
+					if (data.Pokemon[i].Shiny == true)
+					{
+						url = "https://play.pokemonshowdown.com/sprites/xyani-shiny/" + data.Pokemon[i].Species.toLowerCase() + ".gif";
+						backshiny = "image_size-shiny";
+					}
+					else
+					{
+						url = "https://play.pokemonshowdown.com/sprites/xyani/" + data.Pokemon[i].Species.toLowerCase() + ".gif";
+						backshiny = "image_size";
+					}
+				
+					var gender = "";
+					if (data.Pokemon[i].Gender == "Male")
+						gender = "♂";
+					else if (data.Pokemon[i].Gender == "Female")
+						gender = "♀";
+						
+					var hpcol = "round label";
+					if (data.Pokemon[i].HP == "31")
+						hpcol = "round label success";
+					else if (data.Pokemon[i].HP == "xx" || data.Pokemon[i].HP == "00")
+						hpcol = "round label warning";
+						
+					var atkcol = "round label";
+					if (data.Pokemon[i].Atk == "31")
+						atkcol = "round label success";
+					else if (data.Pokemon[i].Atk == "xx" || data.Pokemon[i].Atk == "00")
+						atkcol = "round label warning";
+					
+					var defcol = "round label";
+					if (data.Pokemon[i].Def == "31")
+						defcol = "round label success";
+					else if (data.Pokemon[i].Def == "xx" || data.Pokemon[i].Def == "00")
+						defcol = "round label warning";
+						
+					var spacol = "round label";
+					if (data.Pokemon[i].SpA == "31")
+						spacol = "round label success";
+					else if (data.Pokemon[i].SpA == "xx" || data.Pokemon[i].SpA == "00")
+						spacol = "round label warning";
+						
+					var spdcol = "round label";
+					if (data.Pokemon[i].SpD == "31")
+						spdcol = "round label success";
+					else if (data.Pokemon[i].SpD == "xx" || data.Pokemon[i].SpD == "00")
+						spdcol = "round label warning";
+						
+					var specol = "round label";
+					if (data.Pokemon[i].Spe == "31")
+						specol = "round label success";
+					else if (data.Pokemon[i].Spe == "xx" || data.Pokemon[i].Spe == "00")
+						specol = "round label warning";
+						
+					PokemonForTrade.innerHTML += '<div class="small-12 columns"><div class="panel"><div class="row"><div class="small-2 large-1 columns bottom_align" style="margin: auto;" ><div class="image_box"><div class="' + backshiny + '"><img src="' + url + '" /></div></div></div><div class="small-10 large-9 columns columnDivider"><p class="outline"><strong>' + data.Pokemon[i].Species + '</strong> ' + gender + '<span class="right">OT: ' + data.Pokemon[i].OT + '</span></p><p class="outline"><strong>' + data.Pokemon[i].Nature + '</strong> Nature<span class="right">OT ID: ' + + data.Pokemon[i].OTID + '</p><p class="outline">' + data.Pokemon[i].Ability + '</p><p><span class="' + hpcol + '">' + data.Pokemon[i].HP + ' HP</span> <span class="' + atkcol + '">' + data.Pokemon[i].Atk + ' Atk</span> <span class="' + defcol + '">' + data.Pokemon[i].Def + ' Def</span> <span class="' + spacol + '">' + data.Pokemon[i].SpA + ' SpA</span> <span class="' + spdcol + '">' + data.Pokemon[i].SpD + ' SpD</span> <span class="' + specol + '">' + data.Pokemon[i].Spe + ' Spe</span></div><div class="show-for-large-up large-2 columns"><p>' + data.Pokemon[i].Move1 + '</p><p>' + data.Pokemon[i].Move2 + '</p><p>' + data.Pokemon[i].Move3 + '</p><p>' + data.Pokemon[i].Move4 + '</p></div></div></div>';
+				}
+				LoadLabel.innerHTML = "";
+				curPlace += data.PaginationCount;
+				processing = false;
+			});
+		}
+		LoadPage();
+		
+		$(document).scroll(function(e){
+			// grab the scroll amount and the window height
+			var scrollAmount = $(window).scrollTop();
+			var documentHeight = $(document).height();
+
+			// calculate the percentage the user has scrolled down the page
+			var scrollPercent = (scrollAmount / documentHeight) * 100;
+
+			if (processing == false)
+			{
+				if (scrollPercent > 60) {
+					console.log("Fired condition!");
+					LoadPage();
+				}
+			}
+});
+    </script>
+  </body>
+</html>
