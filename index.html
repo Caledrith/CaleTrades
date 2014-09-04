@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CheirTrades</title>
-		<link rel="stylesheet" href="css/foundation.css" />
-		<link rel="stylesheet" href="css/style.css" />
+		<title>Caledrith's Trades</title>
+		<link rel="stylesheet" href="./css/foundation.css" />
+		<link rel="stylesheet" href="./css/style.css" />
 		<script src="js/vendor/modernizr.js"></script>
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -43,8 +43,8 @@
 		<div class="center_spin" id="loading"><i class="fa fa-spinner fa-5x fa-spin"></i></div>
 	</body>
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
+    <script src="./js/vendor/jquery.js"></script>
+    <script src="./js/foundation.min.js"></script>
     <script>
 		$(document).foundation();
 		
@@ -52,7 +52,7 @@
 		var processing = false;
 		function LoadPage()
 		{
-			$.getJSON("data.txt", function(data) {
+			$.getJSON("./data.txt", function(data) {
 				console.log(data); // use data as a generic object 
 				console.log(curPlace);
 				processing = true;
