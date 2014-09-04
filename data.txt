@@ -1,8 +1,8 @@
 {
-  "Name": "Test",
+  "Name": "Cale Trades",
   "LeftLabel": "0909",
   "RightLabel": null,
-  "PaginationCount": 0,
+  "PaginationCount": 10,
   "Pokemon": [
     {
       "Species": "Palkia",
