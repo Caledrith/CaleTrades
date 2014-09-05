@@ -45,7 +45,7 @@
     {
       "Species": "Cobalion",
       "Gender": "Genderless",
-      "Shiny": True,
+      "Shiny": true,
       "Nature": "Timid",
       "Ability": "Justified",
       "OT": "Carol",
