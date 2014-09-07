@@ -533,7 +533,7 @@
         “Move4": "Hidden Power (Ghost)"
     },
     {
-        "Species": "Kyruem",
+        "Species": "Kyurem",
         "Shiny": false,
         "Nature": "Modest",
         "Ability": "Pressure",
@@ -851,7 +851,7 @@
         “SpA”: “31”,
         “SpD: “31”,
         “Spe”: “31”,
-        “Move1": "Kfalseck Off",
+        “Move1": "Knock Off",
         “Move2": "Destiny Bond",
         “Move3": "Disable",
         “Move4": "Confuse Ray"
