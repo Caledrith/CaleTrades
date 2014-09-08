@@ -159,7 +159,7 @@
     {
         "Species": "Audino",
         “Gender”: “Genderless”,
-	      “Shiny”: true,
+	“Shiny”: true,
         "Nature": "Bold",
         "Ability": "Regenerator",
         “OT”: "Falseah",
@@ -202,7 +202,7 @@
         "Ability": "Simple",
         “OT”: "Daniel",
         “OTID”: “44424”,
-        “HP”: 28,
+        “HP”: "28",
         “Atk”: “31”,
         “Def”: “31”,
         “SpA”: “31”,
@@ -324,7 +324,7 @@
         “Spe”: “31”,
         “Move1": "Stealth Rock",
         “Move2": "Spikes",
-        “Move3": "Kfalseck Off",
+        “Move3": "Knock Off",
         “Move4": "Recover"
     },
     {
@@ -335,10 +335,11 @@
         "Ability": "Clear Body",
         “OT”: "Japan",
         “OTID”: “7194”,
+        "HP": "31",
         “Atk”: “31”,
         “Def”: “31”,
-        “SpA”: "s",
-        “SpD”: "s",
+        “SpA”: "xx",
+        “SpD”: "xx",
         “Spe”: “31”,
         “Move1": "Diamond Storm",
         “Move2": "Moonblast",
@@ -400,7 +401,7 @@
         “Move1": "Dazzling Gleam",
         “Move2": "Shadow Ball",
         “Move3": "Psychic",
-        “Move4": "Grass Kfalset"
+        “Move4": "Grass Knot"
     },
     {
         "Species": "Excadrill",
@@ -523,7 +524,7 @@
         "Nature": "Timid",
         "Ability": "Justified",
         “OT”: "SMR2012",
-        “OTID”: 8272,
+        “OTID”: "8272",
         “HP”: “31”,
         “Atk”: "x",
         “Def”: “31”,
@@ -629,25 +630,6 @@
         “Move2": "Close Combat",
         “Move3": "Swords Dance",
         “Move4": "Crunch"
-    },
-    {
-        "Species": "Mawile",
-        “Gender”: “Genderless”,
-	“Shiny”: true,
-        "Nature": "Adamant",
-        "Ability": "Intimidate",
-        “OT”: "Luna",
-        “OTID”: “60598”,
-        “HP”: “31”,
-        “Atk”: “31”,
-        “Def”: “31”,
-        “SpA”: “31”,
-        “SpD”: “31”,
-        “Spe”: “31”,
-        “Move1": "Fire Fang",
-        “Move2": "Play Rough",
-        “Move3": "Sucker Punch",
-        “Move4": "Swords Dance"
     },
     {
         "Species": "Mawile",
@@ -1239,7 +1221,5 @@
         “Move4": "Thunderbolt"
     },    
     
-
-
   ]
 }
