@@ -138,26 +138,8 @@
       "Move4": "Hidden Power"
     },
     {
-      "Species": "Absol",
-        "Shiny": "Yes",
-        "Nature": "Adamant",
-        "Ability": "Justified",
-        "OT": "Alex",
-        "OTID": 53781,
-        "HP": 31,
-        "Atk": 31,
-        "Def": 31,
-        "SpA": "x",
-        "SpD": 31,
-        "Spe": 31,
-        "Move1": "Sucker Punch",
-        "Move2": "Psycho Cut",
-        "Move3": "Swords Dance",
-        "Move4": "Play Rough"
-    },
-    {
         "Species": "Absol",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Adamant",
         "Ability": "Justified",
         “OT”: "Alex",
@@ -175,7 +157,7 @@
     },
     {
         "Species": "Audino",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Bold",
         "Ability": "Regenerator",
         “OT”: "Falseah",
@@ -193,7 +175,7 @@
     },
     {
         "Species": "Bagon",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Jolly",
         "Ability": "Sheer Force",
         “OT”: "Hydra",
@@ -211,7 +193,7 @@
     },
     {
         "Species": "Bidoof",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Careful",
         "Ability": "Simple",
         “OT”: "Daniel",
@@ -229,7 +211,7 @@
     },
     {
         "Species": "Blaziken",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Adamant",
         "Ability": "Speed Boost",
         “OT”: "Esper",
@@ -247,7 +229,7 @@
     },
     {
         "Species": "Charizard",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Modest",
         "Ability": "Blaze",
         “OT”: "Muk",
@@ -265,7 +247,7 @@
     },
     {
         "Species": "Charizard",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Jolly",
         "Ability": "Blaze",
         “OT”: "Jessica",
@@ -283,7 +265,7 @@
     },
     {
         "Species": "Cobalion",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Timid",
         "Ability": "Justified",
         “OT”: "Carol",
@@ -301,7 +283,7 @@
     },
     {
         "Species": "Darkrai",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Timid",
         "Ability": "Bad Dreams",
         “OT”: "Mat",
@@ -319,7 +301,7 @@
     },
     {
         "Species": "Deoxys",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Calm",
         "Ability": "Pressure",
         “OT”: "Namie",
@@ -332,12 +314,12 @@
         “Spe”: “31”,
         “Move1": "Stealth Rock",
         “Move2": "Spikes",
-        “Move3": "Kfalseck Off",
+        “Move3": "Knock Off",
         “Move4": "Recover"
     },
     {
         "Species": "Diancie",
-        "Shiny": false,
+        “Gender”: “Genderless”,”Shiny”: false,
         "Nature": "Adamant",
         "Ability": "Clear Body",
         “OT”: "Japan",
@@ -354,7 +336,7 @@
     },
     {
         "Species": "Doublade",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Brave",
         "Ability": "False Guard",
         “OT”: "Ashley",
@@ -372,7 +354,7 @@
     },
     {
         "Species": "Dragonite",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Adamant",
         "Ability": "Multiscale",
         “OT”: "Unknown",
@@ -390,7 +372,7 @@
     },
     {
         "Species": "Espeon",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Timid",
         "Ability": "Magic Bounce",
         “OT”: "Calem",
@@ -408,7 +390,7 @@
     },
     {
         "Species": "Excadrill",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Adamant",
         "Ability": "Mold Breaker",
         “OT”: "Wippleflot",
@@ -426,7 +408,7 @@
     },
     {
         "Species": "Flareon",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Calm",
         "Ability": "Flash Fire",
         “OT”: "JMorg",
@@ -444,7 +426,7 @@
     },
     {
         "Species": "Goodra",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Modest",
         "Ability": "Gooey",
         “OT”: "Shewp",
@@ -462,7 +444,7 @@
     },
     {
         "Species": "Groudon",
-        "Shiny": false,
+        “Gender”: “Genderless”,”Shiny”: false,
         "Nature": "Adamant",
         "Ability": "Drought",
         “OT”: "JMORG",
@@ -480,7 +462,7 @@
     },
     {
         "Species": "Hydreigon",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Naïve",
         "Ability": "Levitate",
         “OT”: "Carol",
@@ -498,7 +480,7 @@
     },
     {
         "Species": "Jolteon",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Timid",
         "Ability": "Volt Absorb",
         “OT”: "JMorg",
@@ -516,7 +498,7 @@
     },
     {
         "Species": "Keldeo",
-        "Shiny": false,
+        “Gender”: “Genderless”,”Shiny”: false,
         "Nature": "Timid",
         "Ability": "Justified",
         “OT”: "SMR2012",
@@ -534,7 +516,7 @@
     },
     {
         "Species": "Kyurem",
-        "Shiny": false,
+        “Gender”: “Genderless”,”Shiny”: false,
         "Nature": "Modest",
         "Ability": "Pressure",
         “OT”: "JMorg",
@@ -552,7 +534,7 @@
     },
     {
         "Species": "Latias",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Timid",
         "Ability": "Levitate",
         “OT”: "HELLOED",
@@ -570,7 +552,7 @@
     },
     {
         "Species": "Latios",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Timid",
         "Ability": "Levitate",
         “OT”: "Japan",
@@ -588,7 +570,7 @@
     },
     {
         "Species": "Lopunny",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Jolly",
         "Ability": "Klutz",
         “OT”: "Raiden",
@@ -606,7 +588,7 @@
     },
     {
         "Species": "Lucario",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Jolly",
         "Ability": "Inner Focus",
         “OT”: "Tom",
@@ -624,7 +606,7 @@
     },
     {
         "Species": "Mawile",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Adamant",
         "Ability": "Intimidate",
         “OT”: "Luna",
@@ -642,7 +624,7 @@
     },
     {
         "Species": "Mawile",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Adamant",
         "Ability": "Intimidate",
         “OT”: "Luna",
@@ -660,7 +642,7 @@
     },
     {
         "Species": "Metagross",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Adamant",
         "Ability": "Clear Body",
         “OT”: "Kaushal",
@@ -678,7 +660,7 @@
     },
     {
         "Species": "Mew",
-        "Shiny": "true ",
+        “Gender”: “Genderless”,”Shiny”: "true ",
         "Nature": "Timid",
         "Ability": "Synchronize",
         “OT”: "TPC",
@@ -696,7 +678,7 @@
     },
     {
         "Species": "Pachirisu",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Timid",
         "Ability": "Volt Absorb",
         “OT”: "Bryan",
@@ -714,7 +696,7 @@
     },
     {
         "Species": "Pinsir",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Jolly",
         "Ability": "Moxie",
         “OT”: "Kevin",
@@ -732,7 +714,7 @@
     },
     {
         "Species": "Sableye",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Careful",
         "Ability": "Prankster",
         “OT”: "Alec",
@@ -750,7 +732,7 @@
     },
     {
         "Species": "Samurott",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Modest",
         "Ability": "Torrent",
         “OT”: "JMorg",
@@ -768,7 +750,7 @@
     },
     {
         "Species": "Sceptile",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Timid",
         "Ability": "Unburden",
         “OT”: "Edward",
@@ -786,7 +768,7 @@
     },
     {
         "Species": "Scizor",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Adamant",
         "Ability": "Technician",
         “OT”: "IVAN",
@@ -804,7 +786,7 @@
     },
     {
         "Species": "Serperior",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Timid",
         "Ability": "Overgrow",
         “OT”: "JMorg",
@@ -822,7 +804,7 @@
     },
     {
         "Species": "Shaymin",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Timid",
         "Ability": "Natural Cure",
         “OT”: "Henry",
@@ -840,7 +822,7 @@
     },
     {
         "Species": "Shuppet",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Adamant",
         "Ability": "Frisk",
         “OT”: "PyroCat",
@@ -858,7 +840,7 @@
     },
     {
         "Species": "Slowbro",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Bold",
         "Ability": "Regenerator",
         “OT”: "Trent",
@@ -876,7 +858,7 @@
     },
     {
         "Species": "Stoutland",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Adamant",
         "Ability": "Intimidate",
         “OT”: "JMorg",
@@ -894,7 +876,7 @@
     },
     {
         "Species": "Swablu",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Calm",
         "Ability": "Cloud Nine",
         “OT”: "MASTERxx94",
@@ -912,7 +894,7 @@
     },
     {
         "Species": "Swampert",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Adamant",
         "Ability": "Torrent",
         “OT”: "SoDe",
@@ -930,7 +912,7 @@
     },
     {
         "Species": "Sylveon",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Calm",
         "Ability": "Pixilate",
         “OT”: "Crasher",
@@ -948,7 +930,7 @@
     },
     {
         "Species": "Vaporeon",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Bold",
         "Ability": "Water Absorb",
         “OT”: "JMorg",
@@ -966,7 +948,7 @@
     },
     {
         "Species": "Virizion",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Jolly",
         "Ability": "Justified",
         “OT”: "Carol",
@@ -984,7 +966,7 @@
     },
     {
         "Species": "Zapdos",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Timid",
         "Ability": "Pressure",
         “OT”: "Elias",
@@ -1002,7 +984,7 @@
     },
     {
         "Species": "Palkia",
-        "Shiny": false,
+        “Gender”: “Genderless”,”Shiny”: false,
         "Nature": "Calm",
         "Ability": "Pressure",
         “OT”: "JMORG",
@@ -1020,7 +1002,7 @@
     },
     {
         "Species": "Ninetales",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Timid",
         "Ability": "Drought",
         “OT”: "Rayne",
@@ -1038,7 +1020,7 @@
     },
     {
         "Species": "Houndoom",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Timid",
         "Ability": "Flash Fire",
         “OT”: "James",
@@ -1056,7 +1038,7 @@
     },
     {
         "Species": "Porygon-Z",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Modest",
         "Ability": "Adaptability",
         “OT”: "Brandon",
@@ -1074,7 +1056,7 @@
     },
     {
         "Species": "Venusaur",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Modest",
         "Ability": "Chlorophyll",
         “OT”: "Katie",
@@ -1092,7 +1074,7 @@
     },
     {
         "Species": "Chesnaught",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Impish",
         "Ability": "Bulletproof",
         “OT”: "Josepe :)",
@@ -1110,7 +1092,7 @@
     },
     {
         "Species": "Meowstic-M",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Calm",
         "Ability": "Prankster",
         “OT”: "Link",
@@ -1128,7 +1110,7 @@
     },
     {
         "Species": "Meditite",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Jolly",
         "Ability": "Pure Power",
         “OT”: "Deuce",
@@ -1146,7 +1128,7 @@
     },
     {
         "Species": "Weavile",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Jolly",
         "Ability": "Pressure",
         “OT”: "Carol",
@@ -1164,7 +1146,7 @@
     },
     {
         "Species": "Shiftry",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Timid",
         "Ability": "Chlorophyll",
         “OT”: "JMorg",
@@ -1182,7 +1164,7 @@
     },
     {
         "Species": "Manectric",
-        "Shiny": true,
+        “Gender”: “Genderless”,”Shiny”: true,
         "Nature": "Timid",
         "Ability": "Lightning Rod",
         “OT”: "Stephen",
@@ -1197,7 +1179,7 @@
         “Move2": "Volt Switch",
         “Move3": "Hidden Power (Ice)",
         “Move4": "Thunderbolt"
-    },
+    },    
 
   ]
 }
