@@ -155,7 +155,6 @@
         "Move2": "Psycho Cut",
         "Move3": "Swords Dance",
         "Move4": "Play Rough"
-    },
-    
+    }
   ]
 }
