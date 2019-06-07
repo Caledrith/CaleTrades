@@ -2,7 +2,7 @@
   "Name": "Caledrith's Trades",
   "LeftLabel": "0705-3742-1578",
   "RightLabel": "IGN: John Morgan",
-  "PaginationCount": 10,
+  "PaginationCount": 20,
   "Pokemon": [
     {
         "Species": "Absol",
