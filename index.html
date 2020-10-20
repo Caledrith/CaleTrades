@@ -23,11 +23,11 @@
 		</div>
 		<br>
 		
-		<div class="row collapse" id="search" >
+		<div class="row collapse" id="search1" >
 			<div class="small-10 columns">
-				<input type="text" name="search" placeholder="Search for Pokémon"></input>
+				<input type="text" id="search" placeholder="Search for Pokémon"></input>
 			</div>
-			<div class="small-1 columns">
+			<div class="small-1 columns" onclick="search()">
 				<a href="#" class="button postfix"><i class="fa fa-search"></i></a>
 			</div>
 			<div class="small-1 columns">
@@ -41,20 +41,67 @@
 		<div class="row" id="pagination"></div>
 		
 		<div class="center_spin" id="loading"><i class="fa fa-spinner fa-5x fa-spin"></i></div>
+		<div style="margin: auto; width: 1%;">
+			<a href="https://github.com/Caledrith/CaleTrades">GitHub</a>
+		</div>
 	</body>
 
     <script src="./js/vendor/jquery.js"></script>
-    <script src="./js/foundation.min.js"></script>
+	<script src="./js/foundation.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
 		$(document).foundation();
-		
 		var curPlace = 0;
 		var processing = false;
+		let cache = {};
+		function search() {
+			
+			console.log(getPosition(document.getElementById(document.getElementById("search").value)).y)
+			//console.log(document.getElementById(document.getElementById("search").value).offsetTop)
+			//window.scrollTo(0, getPosition(document.getElementById(document.getElementById("search").value)).y);
+			setTimeout(function () {(window.scrollTo(0, getPosition(document.getElementById(document.getElementById("search").value)).y - 45))},2);
+			//$(window).scrollTop(1000);
+		}
+		function getPosition(element) {
+			var xPosition = 0;
+			var yPosition = 0;
+
+			while(element) {
+				xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+				yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+				element = element.offsetParent;
+			}
+
+    	return { x: xPosition, y: yPosition };
+		};
+		function checkLegality(pokemon) {
+			axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon.Species.toLowerCase()}`)
+  			.then(response => {
+				  console.log(response.data.moves);
+				  var test = response.data.moves;
+				  if (checkArray(test, pokemon.Move1) && checkArray(test, pokemon.Move2) && checkArray(test, pokemon.Move3) && checkArray(test, pokemon.Move4))
+				  	document.getElementById(pokemon.Species + "Legal").innerHTML+="<p>Legal</p>"
+
+			  })
+  			//.then(data => console.log(data));
+		}
+		function checkArray(array, move) {
+			var truthy = false;
+			for (var i = 0; i < array.length; i++) {
+				var yup = array[i].move.name.replace(/-/g, ' ');
+				console.log("Name: " + yup + " THIS: " + move.toLowerCase())
+				if (yup == move.toLowerCase()) {
+					truthy = true;
+					break;
+				}
+			}
+			console.log (truthy);
+			return truthy
+		}
 		function LoadPage()
 		{
 			$.getJSON("./data.txt", function(data) {
 				console.log(data); // use data as a generic object 
-				console.log(curPlace);
 				processing = true;
 				
 				var NameLabel = document.getElementById("name");
@@ -124,26 +171,30 @@
 					else if (data.Pokemon[i].Spe == "xx" || data.Pokemon[i].Spe == "00")
 						specol = "round label warning";
 						
-					PokemonForTrade.innerHTML += '<div class="small-12 columns"><div class="panel"><div class="row"><div class="small-2 large-1 columns bottom_align" style="margin: auto;" ><div class="image_box"><div class="' + backshiny + '"><img src="' + url + '" /></div></div></div><div class="small-10 large-9 columns columnDivider"><p class="outline"><strong>' + data.Pokemon[i].Species + '</strong> ' + gender + '<span class="right">OT: ' + data.Pokemon[i].OT + '</span></p><p class="outline"><strong>' + data.Pokemon[i].Nature + '</strong> Nature<span class="right">OT ID: ' + + data.Pokemon[i].OTID + '</p><p class="outline">' + data.Pokemon[i].Ability + '</p><p><span class="' + hpcol + '">' + data.Pokemon[i].HP + ' HP</span> <span class="' + atkcol + '">' + data.Pokemon[i].Atk + ' Atk</span> <span class="' + defcol + '">' + data.Pokemon[i].Def + ' Def</span> <span class="' + spacol + '">' + data.Pokemon[i].SpA + ' SpA</span> <span class="' + spdcol + '">' + data.Pokemon[i].SpD + ' SpD</span> <span class="' + specol + '">' + data.Pokemon[i].Spe + ' Spe</span></div><div class="show-for-large-up large-2 columns"><p>' + data.Pokemon[i].Move1 + '</p><p>' + data.Pokemon[i].Move2 + '</p><p>' + data.Pokemon[i].Move3 + '</p><p>' + data.Pokemon[i].Move4 + '</p></div></div></div>';
+					PokemonForTrade.innerHTML += '<div class="small-12 columns"><div class="panel" id='+data.Pokemon[i].Species+'><div class="row"><div class="small-2 large-1 columns bottom_align" style="margin: auto;" ><div class="image_box"><div class="' + backshiny + '"><img src="' + url + '" /></div></div></div><div class="small-10 large-9 columns columnDivider"><p class="outline"><strong>' + data.Pokemon[i].Species + '</strong> ' + gender + '<span class="right">OT: ' + data.Pokemon[i].OT + '</span></p><p class="outline"><strong>' + data.Pokemon[i].Nature + '</strong> Nature<span class="right">OT ID: ' + + data.Pokemon[i].OTID + '</p><p class="outline">' + data.Pokemon[i].Ability + '</p><p><span class="' + hpcol + '">' + data.Pokemon[i].HP + ' HP</span> <span class="' + atkcol + '">' + data.Pokemon[i].Atk + ' Atk</span> <span class="' + defcol + '">' + data.Pokemon[i].Def + ' Def</span> <span class="' + spacol + '">' + data.Pokemon[i].SpA + ' SpA</span> <span class="' + spdcol + '">' + data.Pokemon[i].SpD + ' SpD</span> <span class="' + specol + '">' + data.Pokemon[i].Spe + ' Spe</span></div><div class="show-for-large-up large-2 columns"><p>' + data.Pokemon[i].Move1 + '</p><p>' + data.Pokemon[i].Move2 + '</p><p>' + data.Pokemon[i].Move3 + '</p><p>' + data.Pokemon[i].Move4 + '</p></div><div class="columns" id=' + data.Pokemon[i].Species + 'Legal ></div></div></div>';
+					checkLegality(data.Pokemon[i]);
 				}
+				
 				LoadLabel.innerHTML = "";
 				curPlace += data.PaginationCount;
 				processing = false;
 			});
 		}
 		LoadPage();
+
 		
 		$(document).scroll(function(e){
+			
 			// grab the scroll amount and the window height
 			var scrollAmount = $(window).scrollTop();
+			console.log(scrollAmount);
 			var documentHeight = $(document).height();
-
 			// calculate the percentage the user has scrolled down the page
 			var scrollPercent = (scrollAmount / documentHeight) * 100;
 
 			if (processing == false)
 			{
-				if (scrollPercent > 60) {
+				if (scrollPercent > 30) {
 					console.log("Fired condition!");
 					LoadPage();
 				}
